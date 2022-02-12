@@ -14,8 +14,8 @@ window.onscroll = () =>{
 let themeToggler = document.querySelector('#theme-toggler');
 
 themeToggler.onclick = () =>{
-    themeToggler.classList.toggle('fa-sun');
-    if(themeToggler.classList.contains('fa-sun')){
+    themeToggler.classList.toggle('fa-moon');
+    if(themeToggler.classList.contains('fa-moon')){
         document.body.classList.add('active');
     }else{
         document.body.classList.remove('active');
@@ -24,25 +24,23 @@ themeToggler.onclick = () =>{
 
 var path = document.querySelector('#star-path');
 
-// Get length of path... ~577px in this case
+
 var pathLength = path.getTotalLength();
 
-// Make very long dashes (the length of the path itself)
+
 path.style.strokeDasharray = pathLength + ' ' + pathLength;
 
-// Offset the dashes so the it appears hidden entirely
+
 path.style.strokeDashoffset = pathLength;
 
-// Jake Archibald says so
-// https://jakearchibald.com/2013/animated-line-drawing-svg/
+
 path.getBoundingClientRect();
 
 // When the page scrolls...
 window.addEventListener("scroll", function(e) {
  
-  // What % down is it? 
-  // https://stackoverflow.com/questions/2387136/cross-browser-method-to-determine-vertical-scroll-percentage-in-javascript/2387222#2387222
-  // Had to try three or four differnet methods here. Kind of a cross-browser nightmare.
+  
+  
   var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
     
   // Length to offset the dashes

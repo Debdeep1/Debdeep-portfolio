@@ -2,15 +2,15 @@
 
 
 :root{
-    --green:#bc2cbf;
-    --black:#444;
-    --light-color:#777;
-    --bg-color:#e6e6e6;
-    --border:.1rem solid rgba(0,0,0,.2);
-    --box-shadow:.4rem .4rem 1rem #ccc,
-                -.4rem -.4rem 1rem #fff;
-    --box-shadow-inset:.4rem .4rem 1rem #ccc inset,
-                      -.4rem -.4rem 1rem #fff inset;
+    --green:#bc2cbf;                     
+    --black:#fff;
+    --light-color:#ddd;
+    --bg-color:#222;
+    --border:.1rem solid rgba(0,0,0,.4);
+    --box-shadow:.4rem .4rem 1rem #111,
+                -.4rem -.4rem 1rem #333;
+    --box-shadow-inset:.4rem .4rem 1rem #111 inset,
+                      -.4rem -.4rem 1rem #333 inset;
 }
 
 *{
@@ -85,14 +85,14 @@ body{
     z-index: 9999;
 }
 body.active{
-    --black:#fff;
-    --light-color:#ddd;
-    --bg-color:#222;
-    --border:.1rem solid rgba(0,0,0,.4);
-    --box-shadow:.4rem .4rem 1rem #111,
-                -.4rem -.4rem 1rem #333;
-    --box-shadow-inset:.4rem .4rem 1rem #111 inset,
-                      -.4rem -.4rem 1rem #333 inset;
+    --black:#444;
+    --light-color:#777;
+    --bg-color:#e6e6e6;
+    --border:.1rem solid rgba(0,0,0,.2);
+    --box-shadow:.4rem .4rem 1rem #ccc,
+                -.4rem -.4rem 1rem #fff;
+    --box-shadow-inset:.4rem .4rem 1rem #ccc inset,
+                      -.4rem -.4rem 1rem #fff inset;
 }
 
 section{
@@ -267,7 +267,35 @@ section{
     box-shadow: var(--box-shadow-inset);
     color:var(--green);
 }
+.about-transition{
+    animation: aboutAnimate 4s ease-in forwards;
+}
+#aboutimage{
+    width: 79%;
+    height: 100%;
+    opacity: 0;
+    animation: aboutimg 5s ease-out backwards;
+}
+@keyframes aboutimg {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
 
+@keyframes aboutAnimate {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
 .about .row{
     display: flex;
     align-items: center;
@@ -583,5 +611,4 @@ section{
     }
 
 }
-
 
