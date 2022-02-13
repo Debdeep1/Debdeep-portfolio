@@ -33,6 +33,19 @@ body{
     padding-left: 30rem;
     scroll-behavior: smooth;
 }
+.disap{
+    opacity: 0;
+    animation: thanos 3s ease-out backwards;
+}
+@keyframes thanos {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
 .profilepic:hover{
     animation: profilep 2s infinite linear;
 }
@@ -611,4 +624,34 @@ section{
     }
 
 }
+.left{
+    position: absolute;
+    left: 0;
+    width: 65%;
+    height: 180%;
+    background: #fff;
+    z-index: 2;
+}
+.right{
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 180%;
+    background: rgb(226, 37, 37);
+    z-index: 2;
+}
+.parright{
+    position: absolute;
+    width: 50%;
+    height: 180%;
+    background: var(--bg-color);
+    transition: transform 2.5s;
+}
 
+.parleft{
+    position: absolute;
+    width: 65%;
+    height: 180%;
+    background: var(--bg-color);
+    transition: transform 3s;
+}
