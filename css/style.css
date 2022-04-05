@@ -397,7 +397,7 @@ section{
 }
 
 .about .row .progress .bar-1-1 span{
-    width: 90%;
+    width: 80%;
 }
 
 .about .row .progress .bar-1-2 span{
@@ -413,11 +413,11 @@ section{
 }
 
 .about .row .progress .bar-2-2 span{
-    width: 89%;
+    width: 80%;
 }
 
 .about .row .progress .bar-2-3 span{
-    width: 80%;
+    width: 75%;
 }
 
 .education .box-container{
